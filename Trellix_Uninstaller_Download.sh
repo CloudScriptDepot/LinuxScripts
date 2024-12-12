@@ -5,9 +5,9 @@ do
     sshpass -p "" ssh -tt -o StrictHostKeyChecking=no $i "
         sudo su - <<EOF
         hostname
-        curl -LO https://raw.githubusercontent.com/CloudScriptDepot/CrowdStrikeGit/refs/heads/main/Trellix_Uninstall.sh
-        chmod +x Trellix_Uninstall.sh
-        ./Trellix_Uninstall.sh
+        curl -LO https://raw.githubusercontent.com/CloudScriptDepot/LinuxScripts/refs/heads/main/Trellix_Uninstaller_Download.sh
+        chmod +x Trellix_Uninstaller_Download.sh
+        ./Trellix_Uninstall_Download.sh
         systemctl status xagt
 EOF
     " >> output.txt
